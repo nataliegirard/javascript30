@@ -60,7 +60,8 @@
 <script>
 
 const playSound = (e) => {
-  console.log('keypressed: ', e.keyCode);
+  const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  console.log('sound: ', sound);
 }
 
 window.addEventListener('keydown', playSound);
