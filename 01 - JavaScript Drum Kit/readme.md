@@ -21,3 +21,7 @@ L - Tink
 ### 1- &lt;kdb>
 
 I've never worked with keybindings and would not have thought about using the `<kdb>` semantic tag if I had written the HTML for this challenge.
+
+### 2- keycode.info
+
+I usually use `console.log` when I want to know the keycode of the key that is pressed. Watching the video has taught me about the [keycode.info](http://keycode.info/) site that Wes Bos made which will make that process easier.
