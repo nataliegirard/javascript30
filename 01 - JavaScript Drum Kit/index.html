@@ -61,7 +61,10 @@
 
 const playSound = (e) => {
   const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-  console.log('sound: ', sound);
+  if (!sound) return;
+
+  sound.currentTime = 0; // rewind audio file
+  sound.play();
 }
 
 window.addEventListener('keydown', playSound);
