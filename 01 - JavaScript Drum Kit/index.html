@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -59,28 +58,27 @@
 
 <script>
 
-const playSound = (e) => {
-  const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-  if (!sound) return;
+  const playSound = (e) => {
+    const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    if (!sound) return;
 
-  const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-  key.classList.add('playing');
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    key.classList.add('playing');
 
-  sound.currentTime = 0; // rewind audio file
-  sound.play();
-};
+    sound.currentTime = 0; // rewind audio file
+    sound.play();
+  };
 
-const removeTransition = (e) => {
-  if (e.propertyName !== 'transform') return;
-  e.target.classList.remove('playing');
-};
+  const removeTransition = (e) => {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');
+  };
 
-const keys = document.querySelectorAll('.key');
-keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-window.addEventListener('keydown', playSound);
+  const keys = document.querySelectorAll('.key');
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+  window.addEventListener('keydown', playSound);
 
 </script>
-
 
 </body>
 </html>
