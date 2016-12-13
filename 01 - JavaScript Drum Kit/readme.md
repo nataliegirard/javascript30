@@ -15,3 +15,9 @@ J - Snare
 K - Tom
 L - Tink
 ```
+
+## Things I Learnt
+
+### 1- &lt;kdb>
+
+I've never worked with keybindings and would not have thought about using the `<kdb>` semantic tag if I had written the HTML for this challenge.
