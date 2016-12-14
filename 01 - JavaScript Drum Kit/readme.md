@@ -16,6 +16,10 @@ K - Tom
 L - Tink
 ```
 
+## Enhancement
+
+To make this more interesting, I decided to add a DDR-like feature to this app. The idea is to have "keys" scroll down the screen indicating when to press each drum note to play a riff. To keep it simple, it will be a short "rimshot" composed of 3 keys: the tom, kick, then ride.
+
 ## Things I Learnt
 
 ### 1- &lt;kdb>
