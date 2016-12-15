@@ -21,6 +21,13 @@ body,html {
   transform: translateY(-40vh);
 }
 
+.overlay .key {
+  background: gray;
+  opacity: 0.9;
+  border-color: goldenrod;
+  box-shadow: 0 0 10px gold;
+}
+
 .play-ddr {
   animation-name: ddr-animation;
   animation-duration: 4s;
