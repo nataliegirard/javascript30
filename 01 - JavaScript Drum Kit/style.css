@@ -9,6 +9,24 @@ body,html {
   font-family: sans-serif;
 }
 
+.overlay {
+  display:flex;
+  width:100vw;
+  position:absolute;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.first {
+  transform: translateY(200px);
+}
+
+.second {
+  transform: translateY(120px);
+}
+
 .keys {
   display:flex;
   flex:1;
