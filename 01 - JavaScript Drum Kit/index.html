@@ -97,6 +97,16 @@
 <script>
 
   const playSound = (e) => {
+    // if [enter] is pressed, start DDR animation
+    if (e.keyCode === 13) {
+      const overlay = document.querySelector('.overlay');
+      overlay.classList.add('play-ddr');
+      overlay.addEventListener('animationend', (e) => {
+        overlay.classList.remove('play-ddr');
+      });
+      return;
+    }
+
     const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     if (!sound) return;
 
