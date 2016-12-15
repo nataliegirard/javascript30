@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button class="ddr" onClick="playDDR()">Play DDR [enter]</button>
   <div class="overlay">
     <div class="key hidden">
       <kbd>A</kbd>
@@ -95,15 +96,18 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  const playDDR = () => {
+    const overlay = document.querySelector('.overlay');
+    overlay.classList.add('play-ddr');
+    overlay.addEventListener('animationend', (e) => {
+      overlay.classList.remove('play-ddr');
+    });
+  };
 
   const playSound = (e) => {
     // if [enter] is pressed, start DDR animation
     if (e.keyCode === 13) {
-      const overlay = document.querySelector('.overlay');
-      overlay.classList.add('play-ddr');
-      overlay.addEventListener('animationend', (e) => {
-        overlay.classList.remove('play-ddr');
-      });
+      playDDR();
       return;
     }
 

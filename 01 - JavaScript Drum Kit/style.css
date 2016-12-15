@@ -9,6 +9,26 @@ body,html {
   font-family: sans-serif;
 }
 
+.ddr {
+  width: 100px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: #f0ad4e;
+  border: 1px solid #eea236;
+  color: white;
+  font-size: 16px;
+  margin:5px;
+  position:absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.ddr:hover, .ddr:active {
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+
 @keyframes ddr-animation {
     0%   {transform: translateY(-40vh);}
     100% {transform: translateY(100vh);}
