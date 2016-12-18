@@ -1,13 +1,23 @@
 :root {
   --base: #ffc600;
   --spacing: 10;
-  --blur: 10;
+  --rotate: 0;
+  --radius: 0;
+}
+
+.postcard-container {
+  margin: auto;
+  width: 850px;
+  height: 550px;
+  line-height: 525px;
+  background: var(--base);
+  overflow: hidden;
 }
 
 .postcard {
-  padding: calc(1px * var(--spacing));
-  background: var(--base);
-  filter: blur(calc(1px * var(--blur)));
+  transform: scale(var(--spacing)) rotate(calc(1deg * var(--rotate)));
+  vertical-align: middle;
+  border-radius: calc(1px * var(--radius));
 }
 
 .hl {

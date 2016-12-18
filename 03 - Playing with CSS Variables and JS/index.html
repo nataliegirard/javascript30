@@ -10,16 +10,23 @@
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
-    <input type="range" name="spacing" min="10" max="200" value="10">
+    <input type="range" name="spacing" min="0.6" max="1" value="1" step="0.05">
 
-    <label for="blur">Blur:</label>
-    <input type="range" name="blur" min="0" max="25" value="10">
+    <label for="rotate">Rotate:</label>
+    <input type="range" name="rotate" min="-20" max="20" value="0" step="1">
+
+    <br>
+
+    <label for="radius">Corners:</label>
+    <input type="range" name="radius" min="0" max="50" value="0" step="1">
 
     <label for="base">Base Color</label>
     <input type="color" name="base" value="#ffc600">
   </div>
 
-  <img class="postcard" src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <div class="postcard-container">
+    <img class="postcard" src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  </div>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
