@@ -1,13 +1,13 @@
 :root {
   --base: #ffc600;
-  --space: 10px;
-  --blur: 10px;
+  --spacing: 10;
+  --blur: 10;
 }
 
 .postcard {
-  padding: var(--space);
+  padding: calc(1px * var(--spacing));
   background: var(--base);
-  filter: blur(var(--blur));
+  filter: blur(calc(1px * var(--blur)));
 }
 
 .hl {
