@@ -9,3 +9,6 @@ Fix the hand styles so that they can be distinguished. The hour hand is made sho
 
 ### 2. Center Nob and Hour Dots
 Added a center nob to hide away the angles of the clock hands and make it look like they are being held together by something. Added dots in place of each hour to help tell the time.
+
+### 3. Use CSS Variables
+Instead of setting the transform for the hands using JavaScript, set a CSS variable on the root document that can be used in the CSS using the CSS variables (custom properties).
