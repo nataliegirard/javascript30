@@ -15,3 +15,6 @@ Instead of setting the transform for the hands using JavaScript, set a CSS varia
 
 ### 4. Move Hour Hand
 Instead of keeping the hour hand on the hour number, have it move between the hour slots. E.g. if it's 3:30, the hour hand should be between the 3 and the 4.
+
+## Things I Learnt
+I didn't really learn anything from this exercise however I did find myself getting frustrated with not having Sass or a templating language to do some of my additions. It also felt strange to manipulate the styles with JavaScript so I opted to use CSS variables to set the rotation degrees instead.
