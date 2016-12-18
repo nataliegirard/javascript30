@@ -12,3 +12,6 @@ Added a center nob to hide away the angles of the clock hands and make it look l
 
 ### 3. Use CSS Variables
 Instead of setting the transform for the hands using JavaScript, set a CSS variable on the root document that can be used in the CSS using the CSS variables (custom properties).
+
+### 4. Move Hour Hand
+Instead of keeping the hour hand on the hour number, have it move between the hour slots. E.g. if it's 3:30, the hour hand should be between the 3 and the 4.
