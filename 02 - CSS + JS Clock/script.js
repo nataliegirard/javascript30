@@ -11,7 +11,7 @@ const setTime = (secondHand, minuteHand, hourHand) => {
   root.style.setProperty('--minutesDegree', minutesDegree);
 
   const hours = now.getHours();
-  const hoursDegree = ((hours / 12) * 360) + 90;
+  const hoursDegree = ((hours / 12) * 360) + 90 + ((minutes / 60) * 30);
   root.style.setProperty('--hoursDegree', hoursDegree);
 }
 
