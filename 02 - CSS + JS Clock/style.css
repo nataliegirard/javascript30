@@ -57,7 +57,7 @@ body {
   top:50%;
   transform-origin: 100%;
   transform: rotate(90deg);
-  transition: transform 0.05s ease-in-out;
+  border-radius: 10px;
   z-index: 5;
 }
 
