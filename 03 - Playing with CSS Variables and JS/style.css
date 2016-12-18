@@ -1,0 +1,49 @@
+:root {
+  --base: #ffc600;
+  --spacing: 10;
+  --rotate: 0;
+  --radius: 0;
+}
+
+.postcard-container {
+  margin: auto;
+  width: 850px;
+  height: 550px;
+  line-height: 525px;
+  background: var(--base);
+  overflow: hidden;
+}
+
+.postcard {
+  transform: scale(var(--spacing)) rotate(calc(1deg * var(--rotate)));
+  vertical-align: middle;
+  border-radius: calc(1px * var(--radius));
+}
+
+.hl {
+  color: var(--base);
+}
+
+/*
+  misc styles, nothing to do with CSS variables
+*/
+
+body {
+  text-align: center;
+}
+
+body {
+  background: #193549;
+  color: white;
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+}
+
+.controls {
+  margin-bottom: 50px;
+}
+
+input {
+  width:100px;
+}
