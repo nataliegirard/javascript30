@@ -69,16 +69,21 @@
   </style>
 
   <script>
-    const setTime = (secondHand) => {
+    const setTime = (secondHand, minuteHand) => {
       const now = new Date();
 
       const seconds = now.getSeconds();
       const secondsDegree = ((seconds / 60) * 360) + 90;
       secondHand.style.transform = `rotate(${secondsDegree}deg)`;
+
+      const minutes = now.getMinutes();
+      const minutesDegree = ((minutes / 60) * 360) + 90;
+      minuteHand.style.transform = `rotate(${minutesDegree}deg)`;
     }
 
     const secondHand = document.querySelector('.second-hand');
-    setInterval(setTime.bind(null, secondHand), 1000);
+    const minuteHand = document.querySelector('.min-hand');
+    setInterval(setTime.bind(null, secondHand, minuteHand), 1000);
   </script>
 </body>
 </html>
