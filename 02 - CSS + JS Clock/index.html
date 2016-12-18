@@ -61,13 +61,24 @@
       background:black;
       position: absolute;
       top:50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: transform 0.05s ease-in-out;
     }
 
   </style>
 
   <script>
+    const setTime = (secondHand) => {
+      const now = new Date();
 
+      const seconds = now.getSeconds();
+      const secondsDegree = ((seconds / 60) * 360) + 90;
+      secondHand.style.transform = `rotate(${secondsDegree}deg)`;
+    }
 
+    const secondHand = document.querySelector('.second-hand');
+    setInterval(setTime.bind(null, secondHand), 1000);
   </script>
 </body>
 </html>
