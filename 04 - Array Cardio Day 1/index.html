@@ -97,6 +97,18 @@
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
+    const totalYearsLived = (invArray) => {
+      return invArray.reduce( (total, inventor) => {
+        return total + (inventor.passed - inventor.year);
+      }, 0);
+    };
+    console.log(totalYearsLived(inventors));
+
+    QUnit.test("Part 4: total years lived", assert => {
+      const totalYears = 861;
+      const result = totalYearsLived(inventors);
+      assert.equal(result, totalYears, 'together they lived 861 years total');
+    });
 
     // 5. Sort the inventors by years lived
 

@@ -123,11 +123,29 @@ This will display the array in order of the inventors' birth year as follows:
 { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 }
 ```
 
+### Part 4: How many years did all the inventors live?
+
+Using the map function we can add an `age` entry to each inventor object in the inventors list and manually add them up to 861 years.
+
+```javascript
+inventors.map(inventor => {
+  inventor.age = inventor.passed - inventor.year;
+  return inventor;
+})
+```
+
+But using the [array reduce function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) we can skip the step of adding the age to the inventor objects.
+
+```javascript
+inventors.reduce( (total, inventor) => {
+	return total + (inventor.passed - inventor.year);
+}, 0);
+```
+
 ## Improvements
 
 ### Unit tests
 Adding unit tests to prove that these javascript function are outputting what is expected. I'm using QUnit as it is simple and the output can be displayed within the browser.
 
-
-
-
+### Pure functions
+Make sure all functions used are pure functions. Pure functions help reduce the amount of bugs in a program because none of the data is ever changed and therefore we don't have any unexpected results. The array mutative functions are [push](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push), [pop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), [shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift), [unshift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), [sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse), and [splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice).
