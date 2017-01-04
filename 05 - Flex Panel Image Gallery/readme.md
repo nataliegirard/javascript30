@@ -55,3 +55,14 @@ We also need to change the flex item's size when the panel has the `open` class.
 	flex: 5;
 }
 ```
+
+Now we need to add the `open-active` class to the panel when the transition finished so that the top and bottom text paragraphs can transition into place.
+
+```javascript
+function toggleActive(e) {
+	if (e.propertyName.includes('flex')) {
+		this.classList.toggle('open-active');
+	}
+}
+panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+```
