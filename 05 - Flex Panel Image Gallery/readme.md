@@ -20,3 +20,18 @@ There are 3 flexbox container layers for the panels. We have the main container 
 	align-items: center;
 }
 ```
+
+Move the top and bottom text paragraphs off the page so that when the panel is active they can be transitioned into position.
+
+```css
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:first-child,
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+```
