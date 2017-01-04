@@ -66,3 +66,17 @@ function toggleActive(e) {
 }
 panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 ```
+
+## Improvements
+
+I wanted to make this an accordian panel. Instead of simply opening another panel, I want to class the open panel before opening a new panel. I also want to keep the click to close of the open panel. To do this, I need to remove the `open` class from any panel that is not the current panel before I toggle the open state.
+
+```javascript
+function toggleOpen() {
+const panels = document.querySelectorAll('.panel');
+panels.forEach(panel => {
+  if (panel !== this) panel.classList.remove('open');
+});
+this.classList.toggle('open');
+}
+```
