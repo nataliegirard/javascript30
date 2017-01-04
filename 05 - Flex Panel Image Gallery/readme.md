@@ -40,8 +40,7 @@ We want the panel to grow in size when it is clicked. Add event listeners to eac
 
 ```javascript
 function toggleOpen() {
-console.log(this.classList);
-this.classList.toggle('open');
+	this.classList.toggle('open');
 }
 
 const panels = document.querySelectorAll('.panel');
@@ -73,10 +72,10 @@ I wanted to make this an accordian panel. Instead of simply opening another pane
 
 ```javascript
 function toggleOpen() {
-const panels = document.querySelectorAll('.panel');
-panels.forEach(panel => {
-  if (panel !== this) panel.classList.remove('open');
-});
-this.classList.toggle('open');
+	const panels = document.querySelectorAll('.panel');
+	panels.forEach(panel => {
+	  if (panel !== this) panel.classList.remove('open');
+	});
+	this.classList.toggle('open');
 }
 ```
