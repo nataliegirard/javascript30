@@ -167,6 +167,28 @@ The result is as follows:
 { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 }
 ```
 
+### Part 6: Create a list of Boulevards in Paris that contain 'de' anywhere in the name
+
+This part involves selected dom nodes from a [wikipedia page](https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris) and therefore has to be run within the inspector console while viewing that page. The solution is: 
+
+```javascript
+const category = document.querySelector('.mw-category');
+const links = Array.from(category.querySelectorAll('a'));
+const de = links
+	.map(link => link.textContent)
+	.filter(streetName => streetName.includes('de'));
+de
+```
+
+If you copy/paste the code in the inspector's console while viewing the wikipedia page you'll get an array of all the boulevards in Paris that contain the string 'de':
+
+```javascript
+["Boulevard de l'Amiral-Bruix", "Boulevard de Strasbourg", "Boulevard des Capucines",
+"Boulevard de la Chapelle", "Boulevard de Clichy", "Boulevard de l'Hôpital", 
+"Boulevard des Italiens", "Boulevard de la Madeleine", "Boulevard de Magenta",
+"Boulevard de Rochechouart", "Boulevard de Sébastopol", "Boulevard de la Zone"]
+```
+
 ## Improvements
 
 ### Unit tests
