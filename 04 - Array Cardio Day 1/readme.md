@@ -193,6 +193,32 @@ If you copy/paste the code in the inspector's console while viewing the wikipedi
 
 I'm not sure why this is a challenge. We are using the people array now and the task is to sort them alphabetically by last name. The array contains strings of 'lastname, firstname' and therefore we only need to sort the strings alphabetically which is the default functionality for the sort function. Therefore we do not need to write a comparison function here. But if you take a closer look at the people array, the array is already in alphabetical order by last name.
 
+### Part 8: Sum up the instances of each of entries in the data array
+
+This task uses utilizes the reduce function with an object as the accumulator. The object will have each unique vehicle in the data array as a property with a value of the count of each of those data entries.
+
+```javascript
+data.reduce( (counts, vehicle) => {
+	if(!counts[vehicle]) {
+		counts[vehicle] = 0;
+	}
+	counts[vehicle]++;
+	return counts;
+}, {});
+```
+
+The result is the following object:
+
+```javascript
+{
+	car: 5,
+	truck: 3,
+	bike: 2,
+	walk: 2,
+	van: 2
+}
+```
+
 ## Improvements
 
 ### Unit tests
