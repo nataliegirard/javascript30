@@ -66,3 +66,18 @@ This challenge has 8 parts:
 8. Sum up the instances of each of entries in the data array
 
 The output for each section will be delivered to the browser console.
+
+## Part 1: Filter the list of inventors for those who were born in the 1500's
+
+Using the [array filter function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), output a list of inventors who were born in the 1500's. The filter function will simple make sure the inventor's year is greater or equal to 1500 and less than 1600.
+
+```javascript
+inventors.filter( inventor => inventor.year >= 1500 && inventor.year < 1600 )
+```
+
+The output gives us the following entries:
+```javascript
+{ first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 }
+{ first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 }
+```
+
