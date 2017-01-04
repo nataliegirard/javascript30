@@ -23,7 +23,7 @@ const inventors = [
 ];
 ```
 
-The second array is a string array containing flavours.
+The second array is a string array containing flavours. This array is never used in this challenge.
 
 ```javascript
 const flavours = ['Chocolate Chip', 'Kulfi', 'Caramel Praline', 'Chocolate', 
