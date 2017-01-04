@@ -189,6 +189,10 @@ If you copy/paste the code in the inspector's console while viewing the wikipedi
 "Boulevard de Rochechouart", "Boulevard de Sébastopol", "Boulevard de la Zone"]
 ```
 
+### Part 7: Sort the people alphabetically by last name
+
+I'm not sure why this is a challenge. We are using the people array now and the task is to sort them alphabetically by last name. The array contains strings of 'lastname, firstname' and therefore we only need to sort the strings alphabetically which is the default functionality for the sort function. Therefore we do not need to write a comparison function here. But if you take a closer look at the people array, the array is already in alphabetical order by last name.
+
 ## Improvements
 
 ### Unit tests
