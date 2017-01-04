@@ -41,7 +41,7 @@
     };
     console.table(getInventorsFifteen(inventors));
 
-    QUnit.test("Part 1: inventors of the 1500s", function( assert ) {
+    QUnit.test("Part 1: inventors of the 1500s", assert => {
       const fifteen = [
         { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
         { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 }
@@ -53,6 +53,20 @@
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
+    const getInventorNames = (invArray) => {
+      return invArray.map( inventor => `${inventor.first} ${inventor.last}` );
+    };
+    console.log(getInventorNames(inventors));
+
+    QUnit.test("Part 2: inventor names", assert => {
+      const fullNames = ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Marie Curie", "Johannes Kepler",
+  "Nicolaus Copernicus", "Max Planck", "Katherine Blodgett", "Ada Lovelace",
+  "Sarah E. Goode", "Lise Meitner", "Hanna Hammarström"];
+
+      const results = getInventorNames(inventors);
+      assert.equal(results.length, inventors.length, 'same length array');
+      assert.deepEqual(results, fullNames, 'all valid names');
+    });
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest

@@ -82,6 +82,22 @@ The output gives us the following entries:
 { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 }
 ```
 
+### Part 2: Give us an array of the inventors' first and last names
+
+Using the [array map function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), create a new array containing the inventors' first and last names. The map function takes a function which will affect a change on each array item and return a new array containing all the changes. In this case, the function will output the inventor's first name and last name separated by a space.
+
+```javascript
+inventors.map( inventor => `${inventor.first} ${inventor.last}` )
+```
+
+Which outputs an array of strings:
+
+```javascript
+["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Marie Curie", "Johannes Kepler",
+	"Nicolaus Copernicus", "Max Planck", "Katherine Blodgett", "Ada Lovelace",
+	"Sarah E. Goode", "Lise Meitner", "Hanna Hammarström"]
+```
+
 ## Improvements
 
 ### Unit tests
