@@ -35,3 +35,23 @@ Move the top and bottom text paragraphs off the page so that when the panel is a
   transform: translateY(0);
 }
 ```
+
+We want the panel to grow in size when it is clicked. Add event listeners to each panel that will add the open class when clicked.
+
+```javascript
+function toggleOpen() {
+console.log(this.classList);
+this.classList.toggle('open');
+}
+
+const panels = document.querySelectorAll('.panel');
+panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+```
+
+We also need to change the flex item's size when the panel has the `open` class.
+
+```css
+.panel.open {
+	flex: 5;
+}
+```
